@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Chatbot - Cyber Safety Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cyber Safety Hub</h1>
+        <nav>
+            <button id="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tips.html">Safety Tips</a></li>
+                <li><a href="threats.html">Latest Threats</a></li>
+                <li><a href="ai-security.html">AI & Security</a></li>
+                <li><a href="chatbot-cybersecurity.html" class="active">Chatbot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Cybersecurity Q&A Bot</h2>
+        <p class="disclaimer">
+            <strong>Disclaimer:</strong> This is a simple educational chatbot providing general information based on predefined questions. It cannot understand all queries and is not a substitute for professional cybersecurity advice.
+        </p>
+
+        <div id="chatbot-container">
+            <div id="chat-display">
+                <div class="chat-message bot">Hello! Ask me a cybersecurity question. Try asking "What is phishing?" or "How to make a strong password?".</div>
+                <div id="typing-indicator" class="chat-message bot" style="display: none;">...</div>
+            </div>
+            <div id="chat-input-area">
+                <input type="text" id="user-input" placeholder="Type your question here...">
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cyber Safety Hub. Stay Informed, Stay Secure.</p>
+         </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
