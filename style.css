@@ -1,0 +1,495 @@
+/* Basic Reset & Body Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #0a2e5b; /* Dark Blue */
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky; /* Make header sticky */
+    top: 0;
+    z-index: 100; /* Ensure header stays on top */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+nav {
+    max-width: 960px; /* Align nav content with main content */
+    margin: 0 auto;
+    position: relative; /* Needed for menu toggle positioning */
+    padding: 0 1rem; /* Padding for smaller screens */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Center nav links */
+}
+
+nav ul li {
+    display: inline-block; /* Show links side-by-side on desktop */
+    margin: 0 0.5rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.6rem 0.8rem;
+    display: block; /* Important for mobile */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #007bff; /* Medium Blue */
+}
+
+#menu-toggle {
+    display: none; /* Hide hamburger by default */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem; /* Larger icon */
+    cursor: pointer;
+    position: absolute;
+    right: 1.5rem; /* Adjust positioning */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Precise vertical centering */
+}
+
+/* Main Content Area */
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1.5rem 2rem; /* Increased padding */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2, h3, h4 {
+    color: #0a2e5b;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    font-size: 1.8rem; /* Slightly larger heading */
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+section {
+    margin-bottom: 2.5rem; /* Increased spacing */
+}
+
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.6rem; /* Slightly more space */
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+strong { /* Style strong tag used in answers */
+    color: #0a2e5b;
+}
+
+/* Homepage Specific */
+.hero {
+    text-align: center;
+    background: linear-gradient(rgba(10, 46, 91, 0.85), rgba(10, 46, 91, 0.85)), url('placeholder-bg.jpg'); /* Example gradient overlay */
+    background-color: #34495e; /* Fallback color */
+    background-size: cover;
+    background-position: center;
+    color: white; /* Text on hero */
+    padding: 3rem 1.5rem;
+    border-radius: 8px;
+    margin: -1.5rem -2rem 2rem -2rem; /* Extend slightly outside main padding */
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+.hero h2 {
+    color: white;
+    font-size: 2.2rem;
+    border-bottom: none;
+    margin-bottom: 0.5rem;
+}
+.hero p {
+     font-size: 1.1rem;
+     margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #28a745; /* Green */
+    color: white;
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: 25px; /* Pill shape */
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.cta-button:hover {
+    background-color: #218838; /* Darker Green */
+    text-decoration: none;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.quick-links h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.link-cards {
+    display: grid; /* Use grid for better alignment */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 1.5rem; /* Increased gap */
+}
+
+.card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px; /* Consistent radius */
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Use flexbox for content alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Push link to bottom */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.card h4 {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    flex-grow: 1; /* Allow paragraph to take space */
+    margin-bottom: 1rem;
+}
+
+.card a {
+    display: inline-block; /* Needed for padding */
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 15px; /* Pill shape link */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Push link to bottom within flex */
+}
+
+.card a:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+/* Tip/Threat/AI Section Styling */
+.tip-category, .threat-profile, .ai-section {
+    background-color: #fdfdff; /* Slightly off-white */
+    padding: 1.5rem; /* More padding */
+    border-left: 5px solid #17a2b8; /* Teal border */
+    border-radius: 5px;
+    margin-bottom: 2rem; /* Consistent spacing */
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+/* Style lists within these sections */
+.tip-category ul, .threat-profile ul, .ai-section ul {
+    padding-left: 1.2rem; /* Indent lists a bit more */
+}
+.tip-category ul li, .threat-profile ul li, .ai-section ul li {
+    margin-bottom: 0.7rem; /* More space between list items */
+}
+
+
+.tip-category h3, .threat-profile h3, .ai-section h3 {
+     margin-top: 0; /* Remove default top margin */
+     color: #17a2b8; /* Match border color */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 3rem; /* More space before footer */
+    padding: 1.5rem;
+    background-color: #e9ecef; /* Lighter gray */
+    color: #555;
+    border-top: 1px solid #ddd;
+    font-size: 0.9em;
+}
+
+/* --- Chatbot Styles --- */
+
+#chatbot-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Keep rounded corners */
+    max-width: 700px; /* Slightly wider chatbot */
+    margin: 2rem auto; /* Center the chatbot */
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Stronger shadow */
+}
+
+#chat-display {
+    height: 450px; /* Increased height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 1.5rem; /* More padding */
+    background-color: #f8f9fa; /* Light background for chat area */
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column; /* Stack messages vertically */
+    gap: 0.75rem; /* Add gap between messages */
+}
+
+.chat-message {
+    padding: 0.7rem 1.1rem; /* Adjust padding */
+    border-radius: 18px; /* More rounded */
+    margin-bottom: 0; /* Removed bottom margin, using gap now */
+    max-width: 85%; /* Allow slightly wider messages */
+    line-height: 1.45;
+    word-wrap: break-word; /* Ensure long words break */
+}
+/* Style links inside bot messages */
+.chat-message.bot a {
+    color: #0056b3; /* Darker blue for links */
+    font-weight: bold;
+}
+.chat-message.bot ul {
+     margin-top: 0.5rem;
+     margin-bottom: 0.5rem;
+     padding-left: 1.5rem;
+}
+.chat-message.bot li {
+     margin-bottom: 0.4rem;
+}
+
+
+.chat-message.user {
+    background-color: #007bff; /* Blue for user messages */
+    color: white;
+    align-self: flex-end; /* Align user messages to the right */
+    border-bottom-right-radius: 5px; /* Style user bubble */
+}
+
+.chat-message.bot {
+    background-color: #e9ecef; /* Light gray for bot messages */
+    color: #333;
+    align-self: flex-start; /* Align bot messages to the left */
+    border-bottom-left-radius: 5px; /* Style bot bubble */
+}
+.chat-message.bot p {
+    margin-bottom: 0.5rem; /* Reduce paragraph spacing inside bot message */
+}
+.chat-message.bot p:last-child {
+    margin-bottom: 0;
+}
+
+#chat-input-area {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    padding: 1rem; /* More padding */
+    background-color: #f0f0f0; /* Slightly darker input area background */
+    border-top: 1px solid #ccc;
+}
+
+#user-input {
+    flex-grow: 1; /* Input takes available space */
+    padding: 0.8rem 1rem; /* Adjust padding */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 0.75rem; /* More space before button */
+    font-size: 1rem;
+    resize: none; /* Prevent textarea resize if changed */
+    height: auto; /* Allow input to grow if needed (optional) */
+}
+
+#send-button {
+    padding: 0.8rem 1.5rem; /* Adjust padding */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Prevent button text wrapping */
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+}
+
+.disclaimer {
+    font-size: 0.9em;
+    color: #6c757d; /* Slightly darker gray */
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+    background-color: #fff3cd; /* Light yellow background */
+    border: 1px solid #ffeeba; /* Yellow border */
+    border-radius: 4px;
+    display: block; /* Make it block */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    padding: 0.75rem;
+}
+.disclaimer strong {
+     color: #856404; /* Darker yellow/brown for strong text */
+}
+
+/* --- Chatbot Typing Indicator --- */
+#typing-indicator {
+    background-color: #e9ecef; /* Match bot message background */
+    color: #888; /* Lighter text color */
+    font-style: italic;
+    padding: 0.6rem 1.1rem; /* Match message padding */
+    align-self: flex-start; /* Align left */
+    font-size: 0; /* Hide the original '...' text */
+}
+#typing-indicator::after {
+    content: '...'; /* Default state */
+    display: inline-block;
+    animation: typing-dots 1.5s infinite;
+    font-size: 1rem; /* Set font size on the pseudo-element */
+    padding-left: 5px; /* Add some space */
+    font-style: normal; /* Override italic style for dots */
+}
+
+/* Simple dot animation */
+@keyframes typing-dots {
+    0%, 20% { content: '.'; }
+    40% { content: '..'; }
+    60%, 100% { content: '...'; }
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+     header h1 {
+        font-size: 1.5rem; /* Smaller title on mobile */
+     }
+
+    nav ul {
+        display: none; /* Hide nav links by default on mobile */
+        width: 100%;
+        text-align: left;
+        background-color: #0a2e5b; /* Consistent background */
+        position: absolute;
+        top: 100%; /* Position below header */
+        left: 0;
+        z-index: 99; /* Below header */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    nav ul.show {
+        display: block; /* Show nav links when 'show' class is added */
+    }
+
+    nav ul li {
+        display: block; /* Stack links vertically */
+        margin: 0;
+        border-bottom: 1px solid #1a3f7b; /* Separator */
+    }
+     nav ul li:last-child {
+         border-bottom: none; /* Remove border from last item */
+     }
+
+    nav ul li a {
+        padding: 1rem;
+        border-radius: 0; /* Remove radius for mobile list items */
+    }
+
+     nav ul li a:hover,
+     nav ul li a.active {
+        background-color: #0056b3; /* Darker blue for mobile hover */
+     }
+
+    #menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    main {
+        padding: 1.5rem 1rem; /* Adjust padding on smaller screens */
+        margin-top: 1rem;
+    }
+
+     .hero {
+         padding: 2rem 1rem;
+         margin: -1.5rem -1rem 1.5rem -1rem; /* Adjust negative margin */
+     }
+      .hero h2 {
+         font-size: 1.8rem;
+     }
+
+    .link-cards {
+        grid-template-columns: 1fr; /* Single column stack */
+        gap: 1rem;
+    }
+
+    #chat-display {
+        height: calc(100vh - 250px); /* Adjust height based on viewport minus header/input */
+        min-height: 300px; /* Minimum height */
+    }
+
+    #chatbot-container {
+        margin: 1.5rem 0.5rem; /* Adjust margin */
+        width: auto; /* Allow full width */
+        max-width: none; /* Override max-width */
+    }
+
+    #chat-input-area {
+        padding: 0.75rem;
+    }
+
+     #user-input, #send-button {
+         padding: 0.7rem 1rem; /* Adjust padding */
+         font-size: 0.95rem;
+     }
+}
